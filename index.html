@@ -359,18 +359,22 @@ const groups=[
 /* build groups */
 const gc=document.getElementById('groups');
 const treatOptions=[];
+const TREATMENTS=[];
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 groups.forEach(g=>{
   const sec=document.createElement('div');sec.className='group reveal';
   let cards='';
   g.items.forEach((it,i)=>{
     treatOptions.push(it.name);
-    cards+=`<div class="card reveal" data-d="${(i%4)+1}" onclick='openTreatment("${g.cat}",${JSON.stringify(JSON.stringify(it))})'>
-      <h4>${it.name}</h4><p>${it.over.split('.').slice(0,1)[0]}.</p>
+    const idx=TREATMENTS.length; TREATMENTS.push({cat:g.cat,it});
+    cards+=`<div class="card reveal" data-d="${(i%4)+1}" data-idx="${idx}">
+      <h4>${esc(it.name)}</h4><p>${esc(it.over.split('.').slice(0,1)[0])}.</p>
       <span class="more">Learn more &rarr;</span></div>`;
   });
-  sec.innerHTML=`<h3>${g.cat}</h3><div class="grule"></div><div class="cards">${cards}</div>`;
+  sec.innerHTML=`<h3>${esc(g.cat)}</h3><div class="grule"></div><div class="cards">${cards}</div>`;
   gc.appendChild(sec);
 });
+gc.addEventListener('click',e=>{const c=e.target.closest('.card');if(!c)return;openTreatment(+c.dataset.idx);});
 
 /* populate booking select */
 const sel=document.getElementById('bTreatment');
@@ -379,13 +383,13 @@ treatOptions.forEach(t=>opts+=`<option>${t}</option>`);
 sel.innerHTML=opts;
 
 /* MODALS */
-function openTreatment(cat,itStr){
-  const it=JSON.parse(itStr);
-  document.getElementById('tCat').textContent=cat;
+function openTreatment(idx){
+  const rec=TREATMENTS[idx];if(!rec)return;const it=rec.it;
+  document.getElementById('tCat').textContent=rec.cat;
   document.getElementById('tTitle').textContent=it.name;
-  let bull=it.ben.map(b=>`<li>${b}</li>`).join('');
+  let bull=it.ben.map(b=>`<li>${esc(b)}</li>`).join('');
   document.getElementById('tBody').innerHTML=
-    `<p>${it.over}</p><h4>What to expect</h4><p>${it.how}</p><h4>Benefits</h4><ul>${bull}</ul>`;
+    `<p>${esc(it.over)}</p><h4>What to expect</h4><p>${esc(it.how)}</p><h4>Benefits</h4><ul>${bull}</ul>`;
   showModal('tModal');
 }
 function openBooking(pre){

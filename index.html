@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skin Blossom Pro · Physician-Led Medical Spa · North Vancouver, BC</title>
+<meta name="description" content="Skin Blossom Pro — physician-led medical spa in North Vancouver. Medical-grade skin treatments and advanced lasers, delivered with a listen-first approach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#fbf5f2; --cream:#f6eee9; --sand:#faf6f1;
+  --rose:#b07683; --rose-deep:#a86b78; --sage:#8a9b83;
+  --ink:#3a2e30; --ink-soft:#6a595b;
+  --line:#e6d6cf;
+  --serif:'Cormorant Garamond',serif; --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--blush);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.12;color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-family:var(--sans);font-weight:400;letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;color:var(--rose-deep)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:22px 34px;transition:background .4s ease,padding .4s ease,box-shadow .4s ease,backdrop-filter .4s ease}
+nav.scrolled{background:rgba(246,238,233,.82);backdrop-filter:blur(12px);padding:12px 34px;box-shadow:0 1px 20px rgba(58,46,48,.07)}
+.logo img{height:46px;width:auto;transition:height .4s ease}
+nav.scrolled .logo img{height:40px}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{position:relative;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:400;transition:color .3s}
+.nav-links a.link::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--rose-deep);transition:width .35s ease}
+.nav-links a.link:hover{color:var(--rose-deep)}
+.nav-links a.link:hover::after{width:100%}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;
+  padding:13px 26px;border-radius:40px;transition:transform .3s ease,box-shadow .3s ease,background .3s ease,color .3s ease}
+.btn-primary{background:var(--rose-deep);color:#fff}
+.btn-primary:hover{background:var(--rose);transform:translateY(-2px);box-shadow:0 10px 24px rgba(168,107,120,.32)}
+.btn-outline{background:transparent;border:1px solid var(--rose-deep);color:var(--rose-deep)}
+.btn-outline:hover{background:var(--rose-deep);color:#fff;transform:translateY(-2px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch}
+.hero-text{display:flex;flex-direction:column;justify-content:flex-start;padding:150px 6% 60px;background:var(--sand)}
+.hero-img{background:url('img/skin-blossom-pro-hero.jpg') center/cover no-repeat;min-height:60vh}
+.hero-text .eyebrow{margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,5vw,4.4rem);letter-spacing:-.5px;margin-bottom:22px}
+.hero .sub{font-size:1.08rem;color:var(--ink-soft);max-width:520px;margin-bottom:20px}
+.hero .oneline{font-size:.92rem;color:var(--sage);letter-spacing:.06em;margin-bottom:34px;font-weight:400}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.hero-phone{font-size:.9rem;letter-spacing:.1em;color:var(--ink-soft)}
+.hero-phone a{color:var(--rose-deep)}
+
+/* SECTIONS */
+section{padding:110px 0}
+.sec-head{max-width:720px;margin-bottom:50px}
+.sec-head .eyebrow{display:block;margin-bottom:16px}
+.sec-head h2{font-size:clamp(2rem,4vw,3.2rem)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-visual{position:relative}
+.about-visual .frame{overflow:hidden;border:1px solid var(--line);border-radius:4px;padding:12px;background:#fff}
+.about-visual .frame .inner{overflow:hidden;border-radius:2px}
+.about-visual img{width:100%;height:520px;object-fit:cover;transition:transform 1.4s ease}
+.about-visual:hover img{transform:scale(1.05)}
+.about-visual .chip{position:absolute;bottom:26px;left:-14px;background:var(--rose-deep);color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:12px 20px;border-radius:30px;box-shadow:0 12px 30px rgba(168,107,120,.28)}
+.about-copy p{color:var(--ink-soft);margin-bottom:20px;font-size:1.04rem}
+.accent-line{border-left:2px solid var(--sage);padding-left:20px;font-style:italic;font-family:var(--serif);font-size:1.28rem;color:var(--rose-deep);line-height:1.4}
+
+/* TREATMENTS */
+#treatments{background:var(--cream)}
+.group{margin-bottom:60px}
+.group h3{font-size:1.7rem;color:var(--rose-deep);margin-bottom:6px}
+.group .grule{width:46px;height:2px;background:var(--sage);margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px 24px;cursor:pointer;
+  transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(58,46,48,.1);border-color:var(--rose)}
+.card h4{font-size:1.35rem;margin-bottom:10px}
+.card p{font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+.card .more{margin-top:16px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-deep);display:inline-flex;align-items:center;gap:7px;transition:gap .3s}
+.card:hover .more{gap:13px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-info p{margin-bottom:14px;color:var(--ink-soft)}
+.contact-info .label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep);display:block;margin-bottom:4px}
+.contact-info a{color:var(--rose-deep)}
+.map-frame{overflow:hidden;border-radius:6px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(58,46,48,.08)}
+.map-frame iframe{width:100%;height:420px;border:0;display:block}
+
+/* FINAL CTA */
+.finalcta{background:var(--rose-deep);color:#fff;text-align:center;padding:100px 0}
+.finalcta h2{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-bottom:18px}
+.finalcta p{max-width:560px;margin:0 auto 34px;opacity:.92}
+.finalcta .btn-primary{background:#fff;color:var(--rose-deep)}
+.finalcta .btn-primary:hover{background:var(--cream);box-shadow:0 12px 30px rgba(0,0,0,.22)}
+
+/* FOOTER */
+footer{background:var(--ink);color:#e9ddda;padding:64px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .logo img{height:48px;filter:brightness(0) invert(1);opacity:.92}
+footer .tag{margin-top:16px;font-size:.92rem;opacity:.7;max-width:280px}
+footer h5{font-family:var(--sans);font-weight:400;letter-spacing:.18em;text-transform:uppercase;font-size:.74rem;color:var(--rose);margin-bottom:16px}
+footer ul{list-style:none}
+footer li{margin-bottom:10px;font-size:.9rem;opacity:.82}
+footer a:hover{color:#fff;opacity:1}
+footer .fbtn{background:none;border:none;color:#e9ddda;cursor:pointer;font-family:var(--sans);font-size:.9rem;padding:0;text-transform:none;letter-spacing:0}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;font-size:.78rem;opacity:.6;text-align:center;letter-spacing:.05em}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(58,46,48,.55);backdrop-filter:blur(4px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .35s ease}
+.modal-overlay.open{display:flex;opacity:1}
+.modal{background:var(--sand);max-width:620px;width:100%;max-height:88vh;overflow-y:auto;border-radius:8px;padding:44px 44px 40px;position:relative;transform:translateY(24px);transition:transform .4s ease;box-shadow:0 30px 80px rgba(58,46,48,.35)}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal .close{position:absolute;top:20px;right:22px;background:none;border:none;font-size:1.6rem;color:var(--ink-soft);cursor:pointer;line-height:1;transition:color .3s,transform .3s}
+.modal .close:hover{color:var(--rose-deep);transform:rotate(90deg)}
+.modal .eyebrow{display:block;margin-bottom:12px}
+.modal h3{font-size:2.1rem;margin-bottom:18px}
+.modal p{color:var(--ink-soft);margin-bottom:18px}
+.modal h4{font-size:1.25rem;color:var(--rose-deep);margin:22px 0 12px}
+.modal ul{list-style:none;margin-bottom:8px}
+.modal ul li{position:relative;padding-left:24px;margin-bottom:10px;color:var(--ink-soft);font-size:.96rem}
+.modal ul li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--sage)}
+.modal .modal-cta{margin-top:26px}
+
+/* FORM */
+.form-field{margin-bottom:18px}
+.form-field label{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:7px}
+.form-field input,.form-field select,.form-field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:5px;background:#fff;font-family:var(--sans);font-size:.95rem;color:var(--ink);transition:border-color .3s,box-shadow .3s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(176,118,131,.14)}
+.form-field textarea{resize:vertical;min-height:90px}
+.form-success{display:none;text-align:center;padding:20px 0}
+.form-success.show{display:block}
+.form-success .ok{font-family:var(--serif);font-size:1.6rem;color:var(--sage);margin-bottom:12px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+[data-d="1"]{transition-delay:.08s}[data-d="2"]{transition-delay:.16s}
+[data-d="3"]{transition-delay:.24s}[data-d="4"]{transition-delay:.32s}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-img{order:-1;min-height:44vh}
+  .hero-text{padding:120px 8% 60px}
+  .about-grid,.contact-grid,.foot-grid{grid-template-columns:1fr}
+  .about-visual{order:-1}
+  .about-visual img{height:400px}
+}
+@media (max-width:760px){
+  nav{padding:16px 22px}
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .4s ease;box-shadow:-14px 0 40px rgba(58,46,48,.14)}
+  .nav-links.open{transform:translateX(0)}
+  .hamburger{display:flex;z-index:110}
+  section{padding:80px 0}
+  .modal{padding:38px 26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#top" class="logo"><img src="img/skin-blossom-pro-logo.png" alt="Skin Blossom Pro"></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about" class="link">About</a>
+    <a href="#treatments" class="link">Treatments</a>
+    <a href="#contact" class="link">Contact</a>
+    <a href="https://www.instagram.com/skinblossompro/" class="link" target="_blank" rel="noopener">Instagram</a>
+    <button class="btn btn-primary" onclick="openBooking()">Book Now</button>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-text">
+    <span class="eyebrow reveal">Physician-Led Medical Spa · North Vancouver, BC</span>
+    <h1 class="reveal" data-d="1">Skin that looks like you, in full bloom.</h1>
+    <p class="sub reveal" data-d="2">Medical-grade skin treatments and advanced lasers, delivered with a listen-first approach and results that look fresh, natural, and you.</p>
+    <p class="oneline reveal" data-d="3">Led by a dermatologist · Book a complimentary consultation</p>
+    <div class="hero-btns reveal" data-d="3">
+      <button class="btn btn-primary" onclick="openBooking()">Book a Consultation</button>
+      <a href="#treatments" class="btn btn-outline">Explore Treatments</a>
+    </div>
+    <p class="hero-phone reveal" data-d="4">Call us · <a href="tel:6046703311">604-670-3311</a></p>
+  </div>
+  <div class="hero-img" role="img" aria-label="Skin Blossom Pro"></div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="frame"><div class="inner">
+        <img src="img/skin-blossom-pro-about.jpg" alt="Inside Skin Blossom Pro">
+      </div></div>
+      <span class="chip">Dr. Claudia Munoz, MD</span>
+    </div>
+    <div class="about-copy reveal" data-d="1">
+      <span class="eyebrow" style="display:block;margin-bottom:16px">Our Clinic</span>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:26px">Listen first. Treat thoughtfully.</h2>
+      <p>If you're searching for the best medical spa in North Vancouver, you're likely looking for more than a relaxing facial — you want medical-grade treatments, trusted expertise, and results that look fresh, natural, and you.</p>
+      <p>Skin Blossom Pro was founded by Dr. Claudia Munoz, a dermatologist specializing in Dermato-Oncology and Skin Surgery, who brings eighteen years of professional experience to every plan. Our philosophy is simple: listen first, treat thoughtfully, and prioritize safety and natural-looking outcomes — because your skin plan should be uniquely yours.</p>
+      <p class="accent-line">Founded and led by Dr. Claudia Munoz, MD — Dermatologist · Dermato-Oncology &amp; Skin Surgery · 18 years of experience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Treatments</span>
+      <h2>Considered, medical-grade care.</h2>
+    </div>
+    <div id="groups"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta">
+  <div class="wrap reveal">
+    <h2>Your skin plan should be uniquely yours.</h2>
+    <p>Begin with a complimentary consultation. We'll listen to your concerns, review your skin, and build a thoughtful plan around you.</p>
+    <button class="btn btn-primary" onclick="openBooking()">Book a Consultation</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Find Skin Blossom Pro.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p><span class="label">Address</span>103-814 W 15th St<br>North Vancouver, BC V7P 1M6</p>
+        <p><span class="label">Phone</span><a href="tel:6046703311">604-670-3311</a></p>
+        <p><span class="label">Email</span><a href="mailto:info@skinblossompro.ca">info@skinblossompro.ca</a></p>
+        <p><span class="label">Instagram</span><a href="https://www.instagram.com/skinblossompro/" target="_blank" rel="noopener">@skinblossompro</a></p>
+        <button class="btn btn-primary" style="margin-top:12px" onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="map-frame reveal" data-d="1">
+        <iframe src="https://www.google.com/maps?q=103-814%20W%2015th%20St%2C%20North%20Vancouver%2C%20BC%20V7P%201M6&output=embed" loading="lazy" title="Skin Blossom Pro location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><img src="img/skin-blossom-pro-logo.png" alt="Skin Blossom Pro"></a>
+        <p class="tag">Physician-led medical spa in North Vancouver. Listen first, treat thoughtfully.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="fbtn" onclick="openBooking()">Book Now</button></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>103-814 W 15th St, North Vancouver, BC</li>
+          <li><a href="tel:6046703311">604-670-3311</a></li>
+          <li><a href="mailto:info@skinblossompro.ca">info@skinblossompro.ca</a></li>
+          <li><a href="https://www.instagram.com/skinblossompro/" target="_blank" rel="noopener">@skinblossompro</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Skin Blossom Pro. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- TREATMENT MODAL -->
+<div class="modal-overlay" id="tModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('tModal')" aria-label="Close">&times;</button>
+    <span class="eyebrow" id="tCat"></span>
+    <h3 id="tTitle"></h3>
+    <div id="tBody"></div>
+    <div class="modal-cta"><button class="btn btn-primary" onclick="closeModal('tModal');openBooking(document.getElementById('tTitle').textContent)">Book This Treatment</button></div>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal('bModal')" aria-label="Close">&times;</button>
+    <span class="eyebrow">Booking Enquiry</span>
+    <h3>Book your appointment</h3>
+    <p style="margin-bottom:22px">Share a few details and our team will be in touch to confirm your complimentary consultation.</p>
+    <form id="bForm" onsubmit="return submitForm(event)">
+      <div class="form-field"><label>Name</label><input type="text" required></div>
+      <div class="form-field"><label>Email</label><input type="email" required></div>
+      <div class="form-field"><label>Phone</label><input type="tel" required></div>
+      <div class="form-field"><label>Treatment of interest</label><select id="bTreatment"></select></div>
+      <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your goals..."></textarea></div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Send Enquiry</button>
+    </form>
+    <div class="form-success" id="bSuccess">
+      <div class="ok">Thank you</div>
+      <p>Thank you — we will be in touch shortly to confirm your appointment.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- TREATMENT DATA ---- */
+const groups=[
+ {cat:"Injectables & Advanced Facials",items:[
+  {name:"Botox",over:"Medically supervised Botox that restores facial balance and enhances your natural beauty. It softens forehead lines, crow's feet, frown lines and jaw tension for a look that reads refreshed — never overdone.",how:"Every injection is performed by a qualified injector under the guidance of our medical director. We begin with a facial assessment and build a customized rejuvenation plan tailored to the areas that matter most to you.",ben:["Precise, patient-focused placement for natural, balanced results","Performed under our medical director for safety","Targets forehead lines, crow's feet, frown lines & jaw tension","Refreshed, comfortable results — not frozen"]},
+  {name:"OxyGeneo",over:"An innovative 3-in-1 facial that exfoliates, oxygenates and infuses the skin with essential vitamins, peptides and nutrients — leaving your complexion refreshed, rejuvenated and radiant.",how:"OxyGeneo oxygenation technology gently exfoliates while triggering oxygenation from within, then nourishing actives are infused into the skin. Glowing, smooth skin in minutes with no downtime.",ben:["Improves skin tone and complexion clarity","Boosts the efficiency of your skincare","No downtime — glow in minutes","Comfortable, relaxing 3-in-1 treatment"]},
+  {name:"Facials",over:"Professional, fully customized facials designed around your unique skin goals, using COSMOS and Ecocert certified organic, vegan and cruelty-free Nelly De Vuyst formulations.",how:"We assess your skin, then tailor cleansing, exfoliation, treatment and hydration steps to your concerns — whether that's dryness, dullness, congestion or sensitivity.",ben:["Certified organic, vegan & cruelty-free products","Fully tailored to your skin type and goals","Gentle, results-driven and relaxing","Supports a healthier at-home routine"]},
+  {name:"Chemical Peels",over:"A fast, effective way to keep skin looking healthy and beautiful — sloughing away dead skin cells and debris to improve texture, tone and radiance. Choose the Glow Peel for deep rejuvenation or the O2 Peel for instant hydration.",how:"A carefully selected peel solution is applied to resurface the skin. Treatments take only a few minutes and help reduce fine lines, minimize the look of acne scars, and address melasma, pore size and age spots — without harsh surgery or expensive lasers.",ben:["Brightens and evens the complexion","Softens fine lines and wrinkles","Helps minimize acne scars, melasma & pore size","Quick with a brighter, clearer result"]}
+ ]},
+ {cat:"Laser & Light",items:[
+  {name:"Laser Hair Removal",over:"Focused-light laser hair removal for smooth, long-lasting results across the face and body. Say goodbye to painful ingrown hairs, scars, bumps and razor burn — with pricing for men, women and transgender clients.",how:"Focused light is precisely aimed at the hair follicle, treating it while leaving surrounding skin unscathed. A course of sessions delivers progressively smoother, hair-free skin.",ben:["Precision targeting that spares surrounding skin","An end to ingrown hairs, bumps & razor burn","Long-lasting, smooth results","Inclusive pricing for all clients"]},
+  {name:"IPL for Rosacea & Vascular Lesions",over:"Your new go-to solution for calmer, more even-toned skin. IPL pulsed-light technology breaks up redness, flushing and visible vascular lesions — even discoloration that has lingered for years.",how:"Pulsed light targets and breaks up redness and discoloration, dramatically improving the complexion. It's powerful enough to reduce long-standing redness yet gentle enough for virtually all skin tones with minimal risk of significant side effects.",ben:["Reduces rosacea, flushing & visible vessels","Safe for virtually all skin tones","Long-lasting, impressive results","State-of-the-art pulsed-light technology"]},
+  {name:"Laser Skin Rejuvenation",over:"A revolutionary laser treatment that reduces wrinkles, fine lines and age spots while evening tone and refining texture — for a healthier, more radiant complexion.",how:"Targeted laser energy stimulates renewal deep within the skin, smoothing texture and improving tone over a personalized course of sessions.",ben:["Softens wrinkles and fine lines","Fades age spots and evens tone","Refines skin texture","A healthier, more radiant look"]},
+  {name:"Laser Tattoo Removal",over:"Break free from unwanted ink with high-powered laser tattoo removal — safely erasing tattoos of any colour with no scars, just a fresh canvas for the future.",how:"Cutting-edge laser energy vibrates and pulverizes ink particles so your body's immune system naturally flushes them out. The number of sessions depends on your ink; we create a customized removal plan at your consultation.",ben:["Works on vibrant, multi-colour tattoos","No scars — smooth, flawless skin","Customized session plan for your ink","Cutting-edge, precise technology"]},
+  {name:"Dark Spot Removal",over:"Precise dark-spot laser removal that targets stubborn pigmentation for natural-looking, even-toned results — without pain.",how:"Laser energy is focused directly on areas of pigmentation, breaking it down so it fades over a course of treatment while surrounding skin stays protected.",ben:["Targets stubborn pigmentation precisely","Natural-looking, even-toned results","Comfortable, pain-free treatment","Brighter, more uniform complexion"]},
+  {name:"Age Spot Treatment",over:"Advanced laser energy that precisely targets solar lentigines — age spots caused by cumulative UV damage — restoring your skin's natural, even tone.",how:"The laser delivers precise energy to sun-induced pigment, breaking it down so age spots gradually fade and your complexion looks clearer and more balanced.",ben:["Targets UV-induced solar lentigines","Restores natural, even skin tone","Precise, controlled treatment","Clearer, refreshed complexion"]}
+ ]},
+ {cat:"Skin Renewal & Restoration",items:[
+  {name:"Microneedling + RF",over:"Collagen-induction therapy combined with radiofrequency that activates the skin's natural renewal from within — refining texture, tone, acne scars and fine lines with results that last.",how:"Fine channels and radiofrequency energy penetrate deep enough to deliver results even the most expensive skincare can't — stimulating collagen so skin renews itself from within, firmer and smoother over time.",ben:["Boosts natural collagen production","Improves acne scars, texture & fine lines","Firmer, stronger, smoother complexion","Lasting results from within the skin"]},
+  {name:"Acne Treatment",over:"A personalized approach to acne and blemishes that considers your skin type, sensitivity and specific needs — for clearer, more even and comfortable skin.",how:"We work with you to develop an individualized plan that addresses your acne concerns head-on. For acne scars, our microneedling treatment can deliver smooth, healthy, pain-free skin in as little as one session.",ben:["Individualized plan for your skin","Reduces breakouts and evens tone","Firmer, brighter, healthier skin with regular care","Microneedling option for acne scars"]},
+  {name:"Hair Growth & Restoration",over:"A simple, personable treatment that boosts collagen and elastin to promote thicker, healthier, longer hair — helping you regain vibrancy with an easy in-clinic process.",how:"Our in-clinic process stimulates the scalp to support the growth of thicker, healthier hair, comfortably and without complexity.",ben:["Promotes thicker, healthier, longer hair","Boosts collagen and elastin","Simple, comfortable in-clinic process","Helps regain vibrancy"]},
+  {name:"Eczema Support",over:"Eczema is more than dry skin. We support eczema-prone skin between flare-ups with gentle care, barrier repair and routines that reduce recurrence.",how:"We assess your skin and build a gentle, supportive routine focused on repairing the skin barrier and reducing repeat irritation between flare-ups.",ben:["Gentle, supportive care approach","Focus on barrier repair","Routines that reduce recurrence","Support between flare-ups"]}
+ ]},
+ {cat:"Medical & Corrective",items:[
+  {name:"Mole Removal",over:"Mole removal led by expert medical professionals and performed by a specialized Dermato-Oncologist — using advanced surgical and non-surgical techniques matched to your skin and lesion for the highest standard of safety and precision.",how:"Your mole is assessed, then removed using the technique best suited to your skin and lesion type, with clear guidance on the process and aftercare.",ben:["Performed by a specialized Dermato-Oncologist","Advanced surgical & non-surgical options","Matched to your skin and lesion","Highest standard of safety and precision"]},
+  {name:"Skin Tag Removal",over:"Precise, gentle skin tag treatments using advanced medical equipment that protects the surrounding skin, with a consultation that explains process and aftercare in clear steps.",how:"After a clear consultation, skin tags are removed precisely with advanced medical equipment designed to protect the healthy skin around them.",ben:["Gentle, precise removal","Advanced equipment protects surrounding skin","Clear consultation on process & aftercare","Performed by our medical team"]},
+  {name:"Wart Removal",over:"Professional wart removal in North Vancouver, performed safely and precisely by our medical team.",how:"Warts are assessed and treated using the appropriate medical method, with attention to safety, precision and comfort.",ben:["Safe, professional treatment","Precise removal by our medical team","North Vancouver clinic","Clear guidance throughout"]},
+  {name:"Emsella",over:"A non-invasive pelvic-floor treatment for urinary incontinence. Using high-intensity focused electromagnetic energy, Emsella strengthens the pelvic muscles at a depth kegels can't reach.",how:"You remain fully clothed and seated while thousands of muscle contractions are delivered per session. Sessions are less than 30 minutes, painless and non-invasive, with no post-treatment recovery required.",ben:["Sessions under 30 minutes","Stronger, faster results than years of kegels","Painless and non-invasive","No downtime or recovery"]}
+ ]}
+];
+
+/* build groups */
+const gc=document.getElementById('groups');
+const treatOptions=[];
+groups.forEach(g=>{
+  const sec=document.createElement('div');sec.className='group reveal';
+  let cards='';
+  g.items.forEach((it,i)=>{
+    treatOptions.push(it.name);
+    cards+=`<div class="card reveal" data-d="${(i%4)+1}" onclick='openTreatment("${g.cat}",${JSON.stringify(JSON.stringify(it))})'>
+      <h4>${it.name}</h4><p>${it.over.split('.').slice(0,1)[0]}.</p>
+      <span class="more">Learn more &rarr;</span></div>`;
+  });
+  sec.innerHTML=`<h3>${g.cat}</h3><div class="grule"></div><div class="cards">${cards}</div>`;
+  gc.appendChild(sec);
+});
+
+/* populate booking select */
+const sel=document.getElementById('bTreatment');
+let opts='<option value="">Complimentary Consultation</option>';
+treatOptions.forEach(t=>opts+=`<option>${t}</option>`);
+sel.innerHTML=opts;
+
+/* MODALS */
+function openTreatment(cat,itStr){
+  const it=JSON.parse(itStr);
+  document.getElementById('tCat').textContent=cat;
+  document.getElementById('tTitle').textContent=it.name;
+  let bull=it.ben.map(b=>`<li>${b}</li>`).join('');
+  document.getElementById('tBody').innerHTML=
+    `<p>${it.over}</p><h4>What to expect</h4><p>${it.how}</p><h4>Benefits</h4><ul>${bull}</ul>`;
+  showModal('tModal');
+}
+function openBooking(pre){
+  if(pre){const o=[...sel.options].find(x=>x.text===pre);if(o)sel.value=o.value;}
+  document.getElementById('bForm').style.display='block';
+  document.getElementById('bSuccess').classList.remove('show');
+  showModal('bModal');
+}
+function showModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(o=>closeModal(o.id));});
+
+function submitForm(e){e.preventDefault();
+  document.getElementById('bForm').style.display='none';
+  document.getElementById('bSuccess').classList.add('show');
+  return false;}
+
+/* NAV */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);});
+const ham=document.getElementById('ham'),nl=document.getElementById('navLinks');
+ham.addEventListener('click',()=>nl.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+
+/* REVEAL */
+const io=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<!-- ===== POLISH LAYER (inject before </body>) — custom cursor + refined hover/motion ===== -->
+<style id="polish-layer">
+@media (hover:hover) and (pointer:fine){
+  /* custom cursor: a fast dot + a lagging ring, blend against any background */
+  * { cursor: none !important; }
+  #pl-dot,#pl-ring{position:fixed;top:0;left:0;z-index:2147483647;pointer-events:none;border-radius:50%;
+    mix-blend-mode:difference;will-change:transform;transform:translate3d(-50%,-50%,0);}
+  #pl-dot{width:7px;height:7px;background:#fff;transition:width .25s ease,height .25s ease,opacity .3s;}
+  #pl-ring{width:34px;height:34px;border:1px solid rgba(255,255,255,.85);
+    transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),opacity .3s,background .3s;}
+  #pl-ring.hot{width:56px;height:56px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.95);}
+  #pl-dot.hot{width:0;height:0;opacity:0;}
+  #pl-ring.down{width:26px;height:26px;}
+}
+/* refined hover motion — additive, does not hide content */
+a,button,.btn{transition:color .35s ease,background-color .35s ease,border-color .35s ease,transform .35s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;}
+.btn:hover{transform:translateY(-2px);}
+/* card lift: target common card patterns from the recipe */
+[class*="card"],[class*="Card"],.member,.t-card,.svc-cat,.review,.testi-card,.blog-card,.rcard,.group .item,.tile{
+  transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .55s ease,border-color .45s ease !important;}
+[class*="card"]:hover,[class*="Card"]:hover,.member:hover,.t-card:hover,.svc-cat:hover,.review:hover,.testi-card:hover,.blog-card:hover,.rcard:hover,.tile:hover{
+  transform:translateY(-6px) !important;box-shadow:0 22px 50px rgba(20,18,15,.13) !important;}
+/* image zoom inside any overflow-clipped container */
+[class*="card"] img,[class*="Card"] img,.member img,.ph img,.about-mark img,.about-visual img,.about-block img,.rph img,.hero-img,figure img{
+  transition:transform .8s cubic-bezier(.16,1,.3,1) !important;}
+[class*="card"]:hover img,[class*="Card"]:hover img,.member:hover img,.ph:hover img,figure:hover img{transform:scale(1.05) !important;}
+/* animated underline on nav links */
+nav a:not(.btn):not(.logo)::after,.nav a:not(.btn):not(.logo)::after,.navlinks a::after{
+  content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:currentColor;opacity:.6;transition:width .4s cubic-bezier(.16,1,.3,1);}
+nav a:not(.btn):not(.logo),.nav a:not(.btn):not(.logo),.navlinks a{position:relative;}
+nav a:not(.btn):not(.logo):hover::after,.nav a:not(.btn):not(.logo):hover::after,.navlinks a:hover::after{width:100%;}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;} #pl-dot,#pl-ring{display:none !important;} *{cursor:auto !important;}}
+</style>
+<script id="polish-script">
+(function(){
+  if(!window.matchMedia||!window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+  if(window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+  var dot=document.createElement("div"),ring=document.createElement("div");
+  dot.id="pl-dot";ring.id="pl-ring";document.body.appendChild(dot);document.body.appendChild(ring);
+  var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;dot.style.transform="translate3d("+(mx-3.5)+"px,"+(my-3.5)+"px,0)";},{passive:true});
+  (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.transform="translate3d("+(rx-17)+"px,"+(ry-17)+"px,0)";requestAnimationFrame(loop);})();
+  var hot="a,button,.btn,input,textarea,select,[onclick],[role=button],label";
+  addEventListener("mouseover",function(e){ if(e.target.closest(hot)){ring.classList.add("hot");dot.classList.add("hot");}});
+  addEventListener("mouseout",function(e){ if(e.target.closest(hot)){ring.classList.remove("hot");dot.classList.remove("hot");}});
+  addEventListener("mousedown",function(){ring.classList.add("down");});
+  addEventListener("mouseup",function(){ring.classList.remove("down");});
+  addEventListener("mouseleave",function(){dot.style.opacity=0;ring.style.opacity=0;});
+  addEventListener("mouseenter",function(){dot.style.opacity=1;ring.style.opacity=1;});
+})();
+</script>
+<!-- ===== END POLISH LAYER ===== -->
+
+</body>
+</html>

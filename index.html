@@ -426,7 +426,17 @@ if('IntersectionObserver' in window){
   setTimeout(revealAll,1200);
 }else{revealAll();}
 </script>
-<!-- ===== POLISH LAYER (inject before </body>) — custom cursor + refined hover/motion ===== -->
+<!-- ===== POLISH LAYER (inject before <style id="hero-hardrules">
+/* HARD RULES (Reza 2026-07-17): tight header->hero, framed hero image, no dead space, hover ring fades into button */
+.hero{min-height:auto !important;align-items:stretch !important}
+.hero-text{justify-content:center !important;padding-top:clamp(118px,15vh,156px) !important;padding-bottom:clamp(58px,8vh,84px) !important}
+.hero-img{min-height:clamp(560px,78vh,760px) !important}
+.hero + section, .hero + .about, header.hero + section{padding-top:clamp(50px,6vw,80px) !important}
+#pl-ring.hot{width:9px !important;height:9px !important;opacity:0 !important;border-color:rgba(255,255,255,0) !important;background:transparent !important}
+#pl-dot.hot{width:9px !important;height:9px !important;opacity:.9 !important}
+@media (max-width:820px){.hero-img{min-height:44vh !important}.hero-text{padding-top:clamp(94px,13vh,120px) !important;padding-bottom:44px !important}}
+</style>
+</body>) — custom cursor + refined hover/motion ===== -->
 <style id="polish-layer">
 @media (hover:hover) and (pointer:fine){
   /* custom cursor: a fast dot + a lagging ring, blend against any background */
